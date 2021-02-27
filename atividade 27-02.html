@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome do filme <input type="text" id="nomeF"><br>
+    Duração <input type="text" id="dur"><br>
+    <input type="button" value="calcular" onclick="calcular()"><br>
+    <div id="resultado"></div>
+
+    <script>
+        function calcular(){
+            let nomeF = document.getElementById('nomeF').value;
+            let duracao = document.getElementById('dur').value;
+
+            document.getElementById('resultado').innerHTML = 'O filme: ' + nomeF + ' tem ' + Math.trunc(duracao / 60) + 'h e ' + duracao % 60 + ' minutos'
+        }
+    </script>
+</body>
+</html>
